@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { AngularFireAuth } from 'angularfire2/auth'
+import { AngularFireAuth } from 'angularfire2/auth';
+import {Observable} from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
 
 
@@ -30,7 +31,7 @@ export class AppComponent {
   }
 
   chatSend(theirMessage: string) {
-    this.items.push({ message: theirMessage, name: this.name.faceboo.displayName });
+    this.items.push({ message: theirMessage});
     this.msgVal = '';
   }
 
